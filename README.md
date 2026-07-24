@@ -41,4 +41,12 @@ El laboratorio virtualizado recrea un escenario de ataque cliente-servidor utili
 Como parte del análisis, se desarrollaron reglas de defensa en profundidad. El script `mitigacion_firewall.ps1` incluye:
 *   Bloqueo de conexiones salientes hacia puertos comunes de explotación JNDI (389, 1389, 1099).
 *   Implementación de políticas **Zero Trust** para el ejecutable de Java.
+  
+## 📚 Referencias y Créditos
 
+Este proyecto de Prueba de Concepto no habría sido posible sin el trabajo previo de investigadores de seguridad y la comunidad Open Source. Gran parte de la infraestructura y los conceptos técnicos se basaron en los siguientes repositorios:
+
+*   **[Marshalsec](https://github.com/mbechler/marshalsec):** Creado por *mbechler*. Se utilizó esta herramienta fundamental para levantar el servidor LDAP malicioso y redirigir las peticiones JNDI.
+*   **[Apache-Log4j-RCE-PoC](https://github.com/xiajun325/apache-log4j-rce-poc):** Creado por *xiajun325*. Este repositorio sirvió como referencia principal para comprender la estructura del payload en Java y el flujo de la vulnerabilidad RCE.
+*   **[John Hammond - CVE-2021-44228](https://youtu.be/7qoPDq41xhQ):** Análisis práctico y Prueba de Concepto documentada en video por el investigador de ciberseguridad John Hammond, la cual sirvió como guía técnica fundamental para la recreación del entorno cliente-servidor vulnerable en Minecraft.
+##
